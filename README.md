@@ -11,5 +11,5 @@ Compile with:
 - `latexmk -pdf main.tex`
 
 ## Notes / Disclaimer
-This template is provided for formatting and educational purposes only.
+This template is provided for FORMATTING and EDUCATIONAL purposes only. It is NOT A COMPLETE OFFICIAL CHECKLIST.
 Always refer to the official POH/AFM and your operator’s approved procedures.
