@@ -88,7 +88,29 @@
 
 % ------------------------------------------------------------
 % HEADERS / TITLES
+% ----------------------------------------------------------% ------------------------------------------------------------
+% MAIN TITLE BOX (fits text, centered) — no tcolorbox "fit" needed
 % ------------------------------------------------------------
+\newcommand{\maintitle}{%
+  \begin{center}
+    % Padding between border and text:
+    \setlength{\fboxsep}{8pt}%
+    % Border thickness:
+    \setlength{\fboxrule}{0.5pt}%
+    % Box width fits the longest line (plus padding). Adjust if you want it wider/narrower.
+    \fbox{%
+      \begin{minipage}{0.50\textwidth}
+        \centering
+        {\fontsize{13.5}{14.8}\selectfont\bfseries Piper PA-18 180HP\par}
+        \vspace{2pt}
+        {\fontsize{12.2}{13.4}\selectfont\bfseries LV -- FSU\par}
+      \end{minipage}%
+    }
+  \end{center}
+  \vspace{6pt}
+}
+
+
 % Usage:
 %   \hdr{TITLE}         -> normal header with default top spacing
 %   \hdr[0pt]{TITLE}    -> header with no extra top spacing (use at top of a column/block)
@@ -131,6 +153,7 @@
 % ============================================================
 % PAGE 1 — BEFORE FLIGHT
 % ============================================================
+\maintitle
 \pagehdr{BEFORE FLIGHT (ON THE GROUND)}{PREFLIGHT OPERATIONS}
 
 % Start two-column layout for this page.
@@ -141,15 +164,11 @@
 
 % COCKPIT checklist block
 \begin{checklist}
-  \itemline{Cowl Plugs}{Removed}
-  \itemline{AFM/POH}{Checked}
-  \itemline{Discrepancy Record}{Checked}
-  \itemline{Certificates}{Checked}
+  \itemline{master switch}{on}
   \itemline{Fuel Quantity}{Checked}
   \itemline{Hobbs/Tach}{Checked}
-  \itemline{Control Lock (Seat Belt)}{Removed}
   \itemline{Wing Flaps}{Full}
-  \itemline{Fuel Selector Valve}{Both}
+  \itemline{Fuel Selector Valve}{As required}
   \itemline{Circuit Breakers}{In}
   \itemline{Throttle/Mixture}{Idle / ICO}
   \itemline{Carburetor Heat}{Off}
@@ -157,7 +176,6 @@
   \itemline{Avionics}{Off}
   \itemline{Position Lights}{On}
   \itemline{Propeller Area}{Clear}
-  \itemline{Master Switch}{On}
   \itemline{Exterior Lights}{Checked}
   \itemline{Master Switch}{Off}
   \itemline{Fuel Sump Valves (3)}{Sample}
@@ -172,7 +190,6 @@
   \itemline{Propeller \& Spinner}{Checked} % \& is required (because & is a table separator)
   \itemline{Alternator Belt}{Checked}
   \itemline{Intake Air Filter}{Checked}
-  \itemline{Transponder Antenna}{Checked}
   \itemline{VHF Com Ant}{Checked}
   \itemline{Landing Gear Struts}{Checked}
 \end{checklist}
@@ -187,15 +204,15 @@
   \itemline{Left Wheel Tire}{Checked}
   \itemline{Left Disc Brake}{Checked}
   \itemline{Fuel Quantity \& Cap}{Checked}
-  \itemline{Fuel Tank Vent Tube}{FWD / Checked}
   \itemline{Pitot/Static Tube}{Checked}
-  \itemline{Wing Tie-down Rope}{Checked}
   \itemline{Aileron Pulley}{Checked}
   \itemline{Wing Leading Edge}{Checked}
   \itemline{Wing Tip}{Checked}
   \itemline{Aileron}{Checked}
   \itemline{Wing Flap}{Checked}
+  \itemline{Fuel Tank cups}{Checked}
   \itemline{Inspection Plates}{Checked}
+  \itemline{slats attachment and free movement}{checked}
 \end{checklist}
 
 % TAIL section + checklist
@@ -203,7 +220,6 @@
 \begin{checklist}
   \itemline{Left Side Fabric \& Exterior}{Checked}
   \itemline{Vertical Stabilizer}{Checked}
-  \itemline{VHF Navigation Antennas}{Checked}
   \itemline{Horizontal Stabilizer/Brace Wires}{Checked}
   \itemline{Elevator Trim Jack Screw}{Checked}
   \itemline{Tail Wheel Condition}{Checked}
@@ -219,6 +235,7 @@
 \hdr{RIGHT WING (Read \& Do)}
 \begin{checklist}
   \itemline{Right Wheel Tire}{Checked}
+  \itemline{VHF Navigation Antennas}{Checked}
   \itemline{Left Disc Brake}{Checked}
   \itemline{Wing Flap}{Checked}
   \itemline{Aileron}{Checked}
@@ -227,9 +244,10 @@
   \itemline{Wing Tie-down Rope}{Removed}
   \itemline{Aileron Pulley}{Checked}
   \itemline{Fuel Quantity \& Cap}{Checked}
-  \itemline{Fuel Tank Vent Tube}{FWD / Checked}
+  \itemline{Fuel Tank cups}{Checked}
   \itemline{Wheel Chocks}{Removed}
   \itemline{Inspection Plates}{Checked}
+  \itemline{slats attachment and free movement}{checked}
 \end{checklist}
 
 % End two-column layout for page 1
@@ -241,6 +259,7 @@
 % ============================================================
 % PAGE 2 — BEFORE TAKEOFF
 % ============================================================
+\maintitle
 \pagehdr{BEFORE TAKEOFF (AT THE RUNWAY)}{FINAL CHECKS}
 
 % Center the whole checklist in a fixed-width block (robust centering)
@@ -249,26 +268,26 @@
     \hdr{BEFORE TAKEOFF (Read \& Do)}
     \begin{checklist}
       \itemline{Brakes}{Hold}
-      \itemline{Flight Controls/Trim}{Checked}
+      \itemline{Flight Controls}{free}
+      \itemline{Trim}{take off position}
       \itemline{Mixture}{Rich}
       \itemline{Throttle}{1800 RPM}
-      \itemline{Engine Instruments}{Normal}
+      \itemline{oil pressure}{Normal}
+      \itemline{oil temperature}{Normal}
+      \itemline{cylinder head temperature}{Normal}
+      \itemline{EGT temperature}{Normal}
+      \itemline{amperage}{charging}
+      \itemline{voltage}{13.8}
       \itemline{Carburetor Heat}{Checked}
       \itemline{Magnetos (150/50)}{Checked}
       \itemline{Alternator}{Checked}
-      \itemline{Vacuum}{Checked}
       \itemline{Engine Idle}{Checked}
       \itemline{Fuel Quantity}{Checked}
       \itemline{Takeoff Brief}{Complete}
       \itemline{Doors/Windows}{Secured}
-      \itemline{Wing Flaps}{Half}
+      \itemline{Wing Flaps}{as required}
       \itemline{Radio Volume}{Max}
       \itemline{Wind Indicator}{Checked}
-      \itemline{Compass/DG}{Checked}
-      \itemline{Transponder}{ALT}
-      \itemline{White Anti-collision Lights}{On}
-      \itemline{Landing Light}{On}
-      \itemline{Runway Markings}{Confirmed}
     \end{checklist}
   \end{minipage}%
 }
