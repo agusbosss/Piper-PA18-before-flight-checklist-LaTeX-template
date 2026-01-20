@@ -178,20 +178,19 @@
   \itemline{Propeller Area}{Clear}
   \itemline{Exterior Lights}{Checked}
   \itemline{Master Switch}{Off}
-  \itemline{Fuel Sump Valves (3)}{Sample}
 \end{checklist}
 
 % NOSE section + its checklist
 \hdr{NOSE (Read \& Do)}
 \begin{checklist}
+  \itemline{Fuel Sump Valves (3)}{Sample}
   \itemline{Fresh Air Inlet}{Checked}
   \itemline{Engine Compartment}{Checked}
   \itemline{Engine Oil}{5--6 QTS}
   \itemline{Propeller \& Spinner}{Checked} % \& is required (because & is a table separator)
   \itemline{Alternator Belt}{Checked}
   \itemline{Intake Air Filter}{Checked}
-  \itemline{VHF Com Ant}{Checked}
-  \itemline{Landing Gear Struts}{Checked}
+  \itemline{Landing Gear}{Checked}
 \end{checklist}
 
 % Force the next content to start at the TOP of the RIGHT column.
@@ -203,8 +202,6 @@
 \begin{checklist}
   \itemline{Left Wheel Tire}{Checked}
   \itemline{Left Disc Brake}{Checked}
-  \itemline{Fuel Quantity \& Cap}{Checked}
-  \itemline{Pitot/Static Tube}{Checked}
   \itemline{Aileron Pulley}{Checked}
   \itemline{Wing Leading Edge}{Checked}
   \itemline{Wing Tip}{Checked}
@@ -235,7 +232,6 @@
 \hdr{RIGHT WING (Read \& Do)}
 \begin{checklist}
   \itemline{Right Wheel Tire}{Checked}
-  \itemline{VHF Navigation Antennas}{Checked}
   \itemline{Left Disc Brake}{Checked}
   \itemline{Wing Flap}{Checked}
   \itemline{Aileron}{Checked}
@@ -243,7 +239,7 @@
   \itemline{Wing Leading Edge}{Checked}
   \itemline{Wing Tie-down Rope}{Removed}
   \itemline{Aileron Pulley}{Checked}
-  \itemline{Fuel Quantity \& Cap}{Checked}
+  \itemline{Pitot/Static Tube}{Checked}
   \itemline{Fuel Tank cups}{Checked}
   \itemline{Wheel Chocks}{Removed}
   \itemline{Inspection Plates}{Checked}
@@ -257,38 +253,59 @@
 \newpage
 
 % ============================================================
-% PAGE 2 — BEFORE TAKEOFF
+% PAGE 2 — BEFORE TAKEOFF (UPDATED: adds "BEFORE STARTING ENGINE")
 % ============================================================
 \maintitle
 \pagehdr{BEFORE TAKEOFF (AT THE RUNWAY)}{FINAL CHECKS}
 
-% Center the whole checklist in a fixed-width block (robust centering)
+% Center the whole content block
 \noindent\makebox[\textwidth][c]{%
-  \begin{minipage}{0.85\textwidth} % ajustá 0.80–0.90
-    \hdr{BEFORE TAKEOFF (Read \& Do)}
+  \begin{minipage}{0.85\textwidth} % tweak 0.80–0.90 to widen/narrow the block
+
+    % ---- Section 1 ----
+    \hdr{BEFORE STARTING ENGINE}
+
     \begin{checklist}
       \itemline{Brakes}{Hold}
-      \itemline{Flight Controls}{free}
-      \itemline{Trim}{take off position}
+      \itemline{Master Switch}{On}
+      \itemline{Avionics Switch}{Off}
+      \itemline{Mixture}{Full Rich}
+      \itemline{Throttle}{Prime 3 times, then 1/4 (when cold)}
+      \itemline{Propeller}{Clear}
+      \itemline{Start Engine}{On}
+      \itemline{Check All Pressures}{20s after start}
+    \end{checklist}
+
+    % Optional breathing room between sections (adjust as you like)
+    \vspace{6pt}
+
+    % ---- Section 2 ----
+    \hdr{BEFORE TAKEOFF (Read \& Do)}
+
+    \begin{checklist}
+      \itemline{Brakes}{Hold}
+      \itemline{Flight Controls}{Free}
+      \itemline{Trim}{Takeoff Position}
       \itemline{Mixture}{Rich}
       \itemline{Throttle}{1800 RPM}
-      \itemline{oil pressure}{Normal}
-      \itemline{oil temperature}{Normal}
-      \itemline{cylinder head temperature}{Normal}
-      \itemline{EGT temperature}{Normal}
-      \itemline{amperage}{charging}
-      \itemline{voltage}{13.8}
+      \itemline{Oil Pressure}{Normal}
+      \itemline{Oil Temperature}{Normal}
+      \itemline{CHT Temperature}{Normal}
+      \itemline{EGT Temperature}{Normal}
+      \itemline{Amperage}{Charging}
+      \itemline{Voltage}{13.8}
       \itemline{Carburetor Heat}{Checked}
       \itemline{Magnetos (150/50)}{Checked}
-      \itemline{Alternator}{Checked}
       \itemline{Engine Idle}{Checked}
       \itemline{Fuel Quantity}{Checked}
       \itemline{Takeoff Brief}{Complete}
       \itemline{Doors/Windows}{Secured}
-      \itemline{Wing Flaps}{as required}
+      \itemline{Wing Flaps}{As Required}
       \itemline{Radio Volume}{Max}
       \itemline{Wind Indicator}{Checked}
     \end{checklist}
+
   \end{minipage}%
 }
+
 \end{document}
